@@ -1,0 +1,49 @@
+import random
+def generate_random_numbers():
+    """Generates a raondom 4-digit number with no repeated digits"""
+    digits = list("0123456789")
+    random.shuffle(digits)
+
+    if digits[0] == '0':
+        digits[0], digits[1] = digits[1], digits[0]
+    return ''.join(digits[:4])
+
+def get_cows_bulls(guess, secret):
+    """Returns the number of cows and bulls for a given guess against the secret number."""
+    bulls = sum(g == s for g, s in zip(guess, secret))
+    cows = sum(min(guess.count(d), secret.count(d)) for d in set(guess)) - bulls
+    return cows, bulls
+
+def play_game(secret,guess):
+    """Returns the number of cows and bulls."""
+    cows = sum(s == g for s, g in zip(secret, guess))
+    bulls = sum(g in secret for g in guess) - cows
+    return cows, bulls
+
+def play_game():
+    print("Welcome to the Cows and Bulls Game!")
+    print("I have selected a 4-digit number. Try to guess it!")
+    print("A 'bull' means a correct digit but in the wrong place.")
+    print("Type 'exit' to quit.\n")
+
+    secret_number = generate_random_numbers()
+    attempts = 0
+
+    while True:
+        guess = input("Enter your 4-digit guess: ")
+        if guess.lower() == 'exit':
+            print(f"The secret number was: {secret_number}. Thanks for playing!")
+            break
+        if len(guess) != 4 or not guess.isdigit() or len(set(guess)) != 4:
+            print("Invalid input. Please enter a 4-digit number with no repeated digits.")
+            continue
+
+        attempts += 1
+        cows, bulls = get_cows_bulls(guess, secret_number)
+        print(f"Cows: {cows}, Bulls: {bulls}\n")
+
+        if cows == 4:
+            print(f"Congratulations! You've guessed the number {secret_number} in {attempts} attempts.")
+            break
+if __name__ == "__main__":
+    play_game()
