@@ -3,34 +3,9 @@
 
 import os # for clearing terminal screen 
 # imports the other .py files corresponding to the individual games
-from RockPaperScissors import *
-from Hangman import *
-from NumberGuessing import *
-
-# used to call for the instructions on how to play the game the user requested from their respective .py files
-def getInstructions(gameChoice):
-    endloop = False
-    while not endloop:
-        ynChoice = input("Would you like to see the instructions for the game? (y/n): ")
-        if (ynChoice == 'y' or ynChoice == 'Y'):
-            if(gameChoice == '1'):
-                RockPaperScissorsInstructions()
-                endloop = True
-            elif(gameChoice == '2'):
-                HangmanInstructions()
-                endloop = True
-            elif(gameChoice == '3'):
-                NumberGuessingInstructions()
-                endloop = True
-            else:
-                print("Invalid game choice, please select again.")
-        elif (ynChoice == 'n' or ynChoice == 'N'):
-            input("\nPress enter to continue...")
-            endloop = True
-        else:
-            print("Not a valid choice, please select y or n")
-
-
+import RockPaperScissors
+import Hangman
+import NumberGuessing 
 
 def main():
     # loop here enables the "keep asking" if a user puts in an input that doesn't match 1, 2, 3, or q (for quit)
@@ -50,18 +25,16 @@ def main():
 
         if(choice == '1'):
             print("You chose Rock-Paper-Scissors!\n")
-            getInstructions(choice)
-            playRockPaperScissors()
+            RockPaperScissors.runRockPaperScissors()
 
         elif(choice == '2'):
             print("You chose Hangman!")
-            getInstructions(choice)
-            playHangman()
+            Hangman.choose_new_word()
+            Hangman.root.mainloop()
 
         elif(choice == '3'):
             print("You chose Number Guessing!")
-            getInstructions(choice)
-            playNumberGuessing()
+            NumberGuessing.number_guessing_game()
 
         elif(choice == 'q' or choice == 'Q'):
             print("Thank you for using the Game Hub!")
