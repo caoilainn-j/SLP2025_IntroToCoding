@@ -6,12 +6,32 @@ This GitHub repository contains all content related to sheCodes's Introduction t
 The main goal of our SLP team was to introduce concepts of programming in a setting to encourage personal exploration and growth. Team members were taught basics of Python programming syntax and data structures, encouraged to do their own outside research through videos and online learning applications, as well as reach out to the team lead and other team members when needed.
 
 ## Team Members
+**Team Lead:** Caoilainn Johnsson
+Kailyn Sanchez
+Micaela Montinola
+Ruby Vargas
+Mackenzie Afaga
 
 ## Individual Projects
+Each team member was asked complete Codeacademy Python lessons, as well as a supplemetary code-along project, in order to help solidify the learning with hands-on contribution. Below are the following projects they chose from to code:
+
+### [Cows and Bulls](https://www.geeksforgeeks.org/python/python-cows-and-bulls-game/)
+
+### [Word Guessing Game](https://www.geeksforgeeks.org/python/python-program-for-word-guessing-game/)
+
+### [Budget Tracker](https://youtu.be/4TZ1K8EHT2M?si=41owez5YqWaqp3pW&t=1055)
+
+Tem lead offered help when needed, particularly when publishing code to the repository and fixing any bugs faced when programming, but overall all work was done individually by each member to prepare their skills for the final collaborative project. 
 
 ## GameHub Final Project
+The main goal of the Introduction to Coding SLP Team was to create a basic in-terminal project in which each team member could contribute a game of their own choice to a central "Game Hub," which allows the user to pick from a variety of games to play, as well as return back to the "home screen" to pick another game or quit. GameHub allowed each team member to showcase their skills learned throughout this experience, as well as working collaboratively through GitHub to ensure version control, navigating any merge conflicts, and communicating with team lead about any issues encountered throughout the completion of the project.
 
 ### Technical Stack
+**Version Control:** Git
+**IDE:** Visual Studio Code
+**Programming Languages:** Python
+
+### How to Run
 
 ### Screenshots
 
