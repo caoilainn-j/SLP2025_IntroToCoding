@@ -34,7 +34,7 @@ The main goal of the Introduction to Coding SLP Team was to create a basic in-te
 ### How to Run
 ** please note that prerequesites to run are Python and additional library Tkinter **
 1. Begin with cloning the repository, and then navigating to the GameHub_Project folder in desired terminal
-2. Once there, simply type `GameHub.py` and follow the instructions displayed after hitting enter!
+2. Once there, simply type `python GameHub.py` and follow the instructions displayed after hitting enter!
 
 
 ### [Slides with Included Demo](https://docs.google.com/presentation/d/1Ew1CvzluBSJm_kUMCyHZB8it4YbtSL4TiCZ36tqYqeE/edit?usp=sharing)
